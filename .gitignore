@@ -1,0 +1,83 @@
+#############################
+# Node / Express Backend
+#############################
+product-backend/node_modules/
+product-backend/dist/
+product-backend/build/
+product-backend/.env
+product-backend/.env.local
+product-backend/.env.*.local
+product-backend/npm-debug.log*
+product-backend/yarn-debug.log*
+product-backend/yarn-error.log*
+product-backend/pnpm-debug.log*
+product-backend/coverage/
+product-backend/.cache/
+product-backend/tmp/
+product-backend/temp/
+
+
+#############################
+# React Frontend
+#############################
+product-dashboard/node_modules/
+product-dashboard/build/
+product-dashboard/dist/
+product-dashboard/.env
+product-dashboard/.env.local
+product-dashboard/.env.*.local
+product-dashboard/npm-debug.log*
+product-dashboard/yarn-debug.log*
+product-dashboard/yarn-error.log*
+product-dashboard/pnpm-debug.log*
+product-dashboard/coverage/
+product-dashboard/.cache/
+product-dashboard/tmp/
+product-dashboard/temp/
+
+
+#############################
+# Shared / Root
+#############################
+node_modules/
+.env
+.env.local
+.env.*.local
+*.log
+*.tmp
+*.pid
+*.seed
+*.tgz
+
+
+#############################
+# IDE / Editors
+#############################
+.vscode/
+.idea/
+*.swp
+*.swo
+
+
+#############################
+# OS Junk Files
+#############################
+.DS_Store
+Thumbs.db
+
+
+#############################
+# Database / Storage
+#############################
+*.sqlite
+*.db
+data/
+uploads/
+storage/
+
+
+#############################
+# Docker
+#############################
+docker/data/
+docker/logs/
