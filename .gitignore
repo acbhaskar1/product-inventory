@@ -26,14 +26,7 @@ product-dashboard/dist/
 product-dashboard/.env
 product-dashboard/.env.local
 product-dashboard/.env.*.local
-product-dashboard/npm-debug.log*
-product-dashboard/yarn-debug.log*
-product-dashboard/yarn-error.log*
-product-dashboard/pnpm-debug.log*
-product-dashboard/coverage/
-product-dashboard/.cache/
-product-dashboard/tmp/
-product-dashboard/temp/
+
 
 
 #############################
