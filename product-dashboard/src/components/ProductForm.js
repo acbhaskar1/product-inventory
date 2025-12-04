@@ -59,7 +59,7 @@ return (
         required
       />
       <datalist id="categories">
-        <option value="Chose Category"></option>
+        <option value=""></option>
         <option value="Mobile"></option>
         <option value="Laptop"></option>
         <option value="Accessories"></option>

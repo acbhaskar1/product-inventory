@@ -15,13 +15,13 @@ function App() {
   const [sortBy, setSortBy] = useState("");
   const [page, setPage] = useState(1);
   const [category, setCategory] = useState("");
-  const filtered = products.filter((p) =>
-    p.name.toLowerCase().includes(search.toLowerCase())
-  );
-  const filteredProducts = products.filter(p =>
-  category === "" ? true : p.category === category
-);
-  let sorted = [...filtered];
+ 
+  let filteredList = products.filter((p) => {
+    const searchMatch = p.name.toLowerCase().includes(search.toLowerCase());
+    const categoryMatch = category === "" || p.category === category;
+    return searchMatch && categoryMatch;
+  });
+  let sorted = [...filteredList];
   if (sortBy === "name-asc")
     sorted.sort((a, b) => a.name.localeCompare(b.name));
   if (sortBy === "name-desc")
@@ -35,7 +35,7 @@ function App() {
 
   useEffect(() => {
     loadProducts();
-  }, []);
+  }, [search, category]);
 
   const loadProducts = async () => {
     const data = await fetchProducts();
@@ -74,7 +74,7 @@ function App() {
       />
       <select
         onChange={(e) => setSortBy(e.target.value)}
-        style={{ marginLeft: 10 }}
+        style={{ marginLeft: "0px", padding: "6px" }}
       >
         <option value="">Sort By</option>
         <option value="name-asc">Name ↑</option>
@@ -88,9 +88,10 @@ function App() {
         list="categories"
         value={category}
         onChange={(e) => setCategory(e.target.value)}
+        style={{ marginLeft: "10px", padding: "6px" }}
       />
       <datalist id="categories">
-        <option value="Select Category"></option>
+        <option value=""></option>
         <option value="Mobile"></option>
         <option value="Laptop"></option>
         <option value="Accessories"></option>
